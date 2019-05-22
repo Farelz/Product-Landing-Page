@@ -73,12 +73,35 @@ section p {
 }
 
 section#home input {
-	font-size: 2rem;
-	border: none;
-	border-radius: 8px;
+	background: transparent;
+	width: 100%;
+	border: 0;
+	border-bottom: 1px solid white;
+	padding: 1em 0 .8em;
+	text-align: center;
+	font-size: 18px;
+	font-family: inherit;
+	line-height: 1.5;
+	color: white !important;
+	outline: none;
 }
 
-section#home button {
+button {
+	background: orangered !important;
+	all: unset;
+	margin-top: 2em;
+	border: 2px solid white;
+	padding: 1em 4em;
+	border-radius: 50px;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	position: relative;
+	transition: all 500ms ease;
+}
+
+input [placeholder=Email] {
+	font-size: 10px;
 }
 
 /* section images */
