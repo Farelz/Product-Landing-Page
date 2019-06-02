@@ -10,6 +10,7 @@ body {
 	line-height: 1.6;
 	height: 100vh;
 	overflow: hidden;
+	background-attachment: fixed;
 }
 
 .container {
@@ -53,7 +54,7 @@ body {
 	color: skyblue;
 }
 
-section {
+section#home {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -73,7 +74,6 @@ section p {
 }
 
 section#home input {
-	background: transparent;
 	width: 100%;
 	border: 0;
 	border-bottom: 1px solid white;
@@ -82,15 +82,15 @@ section#home input {
 	font-size: 18px;
 	font-family: inherit;
 	line-height: 1.5;
-	color: white !important;
 	outline: none;
+	border-radius: 10px;
 }
 
 button {
 	background: orangered !important;
 	all: unset;
 	margin-top: 2em;
-	border: 2px solid white;
+	border: 2px solid orangered;
 	padding: 1em 4em;
 	border-radius: 50px;
 	cursor: pointer;
@@ -104,12 +104,116 @@ input [placeholder=Email] {
 	font-size: 10px;
 }
 
+section#menu {
+	margin: 0;
+	padding: 0;
+	background: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+}
+
+.menu-table {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.col {
+	flex: 25%;
+	padding: 10px;
+	max-width: 320px;
+	box-sizing: border-box;
+}
+
+.table {
+	background: #fff;
+	padding: 40px 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 10px #00000070;
+	color: black;
+	border-radius: 15px;
+	opacity: 0.7;
+}
+
+.table h2 {
+	text-transform: uppercase;
+}
+
+.table ul {
+	margin: 0;
+	padding: 0;
+}
+
+.table ul li {
+	padding: 10px 0;
+	list-style: none;
+}
+
+.price {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+.price span {
+	display: block;
+	font-size: 14px;
+}
+
+.table a {
+	text-decoration: none;
+	color: #2c3e50;
+	border: 2px solid #2c3e50;
+	display: block;
+	padding: 10px 0;
+	margin: 10px 0;
+	border-radius: 40px;
+	text-transform: uppercase;
+	font-size: 14px;
+	transition: 0.5s linear;
+}
+
+.table a:hover {
+	background: #2c3e50;
+	color: #fff;
+}
+
+.pop {
+	background: #2c3e50;
+	color: #fff;
+	transform: rotate(45deg);
+	padding: 10px 40px;
+	position: absolute;
+	top: 10px;
+	right: -34px;
+}
+
+@media screen and (max-width: 980px) {
+	.col {
+		flex: 50%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.col {
+		flex: 100%;
+	}
+}
+
 /* section images */
 section#home {
 	background: url('images/petr-sevcovic-594807-unsplash.jpg') no-repeat center center/cover;
 }
 
-section#pricing {
+section#menu {
 	background: url('images/blur-chef-close-up-262978.jpg') no-repeat center center/cover;
 }
 
@@ -122,5 +226,5 @@ section#contactus {
 }
 
 .push {
-	margin-right: auto;
+	margin-bottom: auto;
 }
